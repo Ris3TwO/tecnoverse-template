@@ -140,6 +140,11 @@ img {
     background-size: 100% auto;
 }
 
+.img-responsive-2 {
+    display: block;
+    margin: auto;
+}
+
 .effect {
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
@@ -1370,9 +1375,9 @@ Blog
 ----------------------------------------*/
 
 .page-header {
-    top: -10%;
+    top: -6%;
     position: relative;
-    height: 70%;
+    height: 100%;
     min-height: 24rem;
     padding-top: 24rem;
     padding-bottom: 8rem;
