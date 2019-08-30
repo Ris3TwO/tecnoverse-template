@@ -708,6 +708,10 @@ small {
     padding-left: .75em;
 }
 
+.card .card-right a {
+    margin-left: .75em;
+}
+
 .card .card-5-7 .card-left {
     width: 41.66666667%;
 }
@@ -725,6 +729,15 @@ small {
 .btn-default:hover {
     color: #333;
     background-color: #fff;
+}
+
+
+/*----------------------------------------
+Team
+----------------------------------------*/
+
+.card-body .card-body-text {
+    padding-bottom: 2em;
 }
 
 
@@ -1451,6 +1464,16 @@ Blog
     margin-top: .6rem;
 }
 
+.img-text {
+    text-align: right;
+    padding-right: 22em;
+}
+
+.img-block .img-text {
+    text-align: center;
+    padding-right: 10em;
+}
+
 
 /*----------------------------------------
 Contact
@@ -1641,6 +1664,44 @@ Footer
 Mediaqueries
 ----------------------------------------*/
 
+@media screen and (min-width: 320px) {
+    .page-header {
+        top: -10%;
+        margin: 0 0 60px;
+    }
+    .table-cell {
+        padding-top: -10px;
+    }
+    .page-header .table-cell {
+        top: -6em;
+    }
+    .img-text {
+        text-align: center;
+        padding-right: 0;
+    }
+    .img-block .img-text {
+        text-align: center;
+        padding-right: 0;
+    }
+    .card .card-5-7 .card-left {
+        width: 100%;
+        padding-top: 1em;
+    }
+    .card .card-5-7 .card-left img {
+        width: 70;
+    }
+    .card .card-5-7 .card-right {
+        width: 100%;
+    }
+    .writer-name-article h4 {
+        font-size: 10px;
+    }
+    .writer-name-article small {
+        font-size: 65%;
+        line-height: 0;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .nav-wrapper {
         padding: 20px 0;
@@ -1673,6 +1734,26 @@ Mediaqueries
     .home-carousel:hover .owl-prev.disabled .home-slider-btn {
         opacity: .4;
     }
+    .page-header {
+        top: -10%;
+    }
+    .card .card-5-7 .card-left {
+        width: 41.66666667%;
+    }
+    .card .card-right .img-text {
+        padding-left: 0;
+        text-align: right;
+        padding-right: 22em;
+    }
+    .card .card-5-7 .card-right {
+        width: 58.33333333%;
+    }
+    .writer-name-article h4 {
+        font-size: 22px;
+    }
+    .writer-name-article small {
+        font-size: 85%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -1685,6 +1766,12 @@ Mediaqueries
     }
     .services-separator {
         display: block;
+    }
+    .card .card-5-7 .card-left {
+        width: 41.66666667%;
+    }
+    .card .card-5-7 .card-right {
+        width: 58.33333333%;
     }
 }
 
