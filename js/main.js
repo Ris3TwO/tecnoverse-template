@@ -267,44 +267,6 @@ $(function() {
         });
     };
 
-
-    /*-----------------------------------------------------------------
-      Javascript Function for PROGRESS BAR LINES  SCRIPT
-    ------------------------------------------------------------------*/
-
-    var linesHead = $(".skills-section"),
-        line = $(".progress-bar-line");
-
-    //Progress Bars function
-    function progressFunction(e) {
-
-        if (linesHead.length) {
-
-            if (!linesHead.hasClass("done")) {
-
-                var linesHeadTop = linesHead.offset().top,
-                    top = allWindow.scrollTop(),
-                    winH = allWindow.height() - 160;
-
-                if (top >= linesHeadTop - winH) {
-
-                    linesHead.addClass("done");
-                    $.each(line, function(i, val) {
-
-                        var thisLine = $(this),
-                            value = thisLine.data("percent"),
-                            progressCont = $(thisLine).closest('.progress-bar-linear').find(".progress-cont span");
-
-                        thisLine.css("width", value + "%");
-                        progressCont.html(value + "%")
-
-                    });
-                }
-            }
-        }
-    } //End progressFunction Fuction
-
-
     function scrollFunctions() {
         stikyNav();
         ChangeClass();
@@ -460,84 +422,11 @@ $(function() {
         });
     }
 
-
-    /*------------------------------------------------------
-      Javascript Function for filtering portfolio items
-    --------------------------------------------------------*/
-
-    var FilterContainer = $('#work .filtr-container');
-
-    if (FilterContainer.length > 0 && !!$.prototype.isotope) {
-
-        var filterizd;
-        FilterContainer.imagesLoaded(function() {
-            filterizd = FilterContainer.isotope({
-                itemSelector: '.filtr-item',
-            });
-        });
-
-        $('#work-list li a.filter').on('click', function(e) {
-
-            // Prevent the default link behavior 
-            e.preventDefault();
-
-            var target = $(this),
-                filterValue = target.data('filter');
-
-            filterizd.isotope({ filter: filterValue });
-
-            // return if already current
-            if (!target.hasClass("filter-active")) {
-                // remove current
-                $('#work-list').find('.filter-active').removeClass('filter-active');
-                // set current
-                target.addClass('filter-active');
-            }
-
-        });
-
-    }
-
-
-    /*-------------------------------------------
-     Magnific Popup Portfolio Initializing
-    -------------------------------------------*/
-
-    $(".popup-youtube").magnificPopup({
-        type: 'iframe'
-    });
-
-    $('.popup-link').magnificPopup({
-        type: 'image',
-        removalDelay: 300,
-        mainClass: 'mfp-fade',
-        gallery: {
-            enabled: true
-        },
-        zoom: {
-            enabled: true,
-            duration: 260,
-            easing: 'ease-in',
-        }
-    });
-
-
     /*------------------------------------------------------
     Javascript Function for initialize owl carousel
     --------------------------------------------------------*/
 
     if (!!$.prototype.owlCarousel) {
-
-        $(".home-3 .home-carousel").owlCarousel({
-            nav: true,
-            navText: [
-                "<div class='home-slider-btn effect ver-center'><i class='fa fa-chevron-left center'></i><span></span></div>",
-                "<div class='home-slider-btn effect ver-center'><i class='fa fa-chevron-right center'></i><span></span></div>"
-            ],
-            dots: true,
-            loop: true,
-            items: 1,
-        });
 
         $('.owl-articles').owlCarousel({
             loop: true,
@@ -652,6 +541,5 @@ $(function() {
 
         });
     });
-
 
 });
